@@ -17,7 +17,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
+import { ChevronDown, ChevronUp, ExternalLink, Github } from "lucide-react";
 
 interface ProjectCardProps {
   project: {
@@ -30,6 +30,7 @@ interface ProjectCardProps {
     results: string;
     visualizations?: string[];
     link?: string;
+    githubLink?: string;
   };
 }
 
@@ -46,6 +47,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       "https://images.unsplash.com/photo-1542903660-eedba2cda473?w=800&q=80",
     ],
     link = "#",
+    githubLink = "https://github.com/Roshanrajmahato/Student_Performance_mlproject.git",
   } = project;
   const [expanded, setExpanded] = useState(false);
   const [open, setOpen] = useState(false);
@@ -167,8 +169,20 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 </div>
               )}
 
-              {link && (
-                <div className="flex justify-end">
+              <div className="flex justify-end gap-2">
+                {githubLink && (
+                  <Button
+                    as="a"
+                    href={githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="outline"
+                    className="flex items-center gap-2"
+                  >
+                    GitHub <Github className="h-4 w-4" />
+                  </Button>
+                )}
+                {link && (
                   <Button
                     as="a"
                     href={link}
@@ -178,8 +192,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                   >
                     Visit Project <ExternalLink className="h-4 w-4" />
                   </Button>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           </DialogContent>
         </Dialog>

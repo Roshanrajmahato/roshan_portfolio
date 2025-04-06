@@ -133,10 +133,13 @@ const Home = () => {
               Skills
             </a>
             <a
-              href="#experience"
+              href="#education"
               className="hover:text-primary transition-colors"
             >
-              Experience
+              Education
+            </a>
+            <a href="#resume" className="hover:text-primary transition-colors">
+              Resume
             </a>
             <a href="#contact" className="hover:text-primary transition-colors">
               Contact
@@ -183,8 +186,8 @@ const Home = () => {
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
-                alt="Jane Doe"
+                src="https://drive.google.com/uc?export=view&id=1Uh8WYFQv-f_6uiTyBlyLQGKGk7zftLJX"
+                alt="Roshan Raj Mahato"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -238,23 +241,117 @@ const Home = () => {
         </motion.div>
       </section>
       <Separator className="container mx-auto" />
-      {/* Experience Section */}
-      <section id="experience" className="py-20 container mx-auto">
+      {/* Education Section */}
+      <section id="education" className="py-20 container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold mb-2">Professional Experience</h2>
+          <h2 className="text-3xl font-bold mb-2">Education</h2>
           <p className="text-muted-foreground mb-10">
-            My journey in the field of data science and analytics
+            My academic background and qualifications
           </p>
 
           <div className="space-y-8">
-            {experiences.map((experience) => (
-              <TimelineItem key={experience.id} experience={experience} />
-            ))}
+            <Card className="w-full mb-6 bg-white border-l-4 border-l-primary shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    Computer Science & Engineering
+                  </h3>
+                  <div className="flex flex-col sm:flex-row sm:items-center text-gray-600 mt-1">
+                    <span className="font-medium">
+                      Ramgarh Engineering College
+                    </span>
+                    <span className="hidden sm:block sm:mx-2">•</span>
+                    <span className="text-sm">Jun 2021 - Jul 2025</span>
+                  </div>
+                  <p className="mt-3 text-gray-700">7 CGPA</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="w-full mb-6 bg-white border-l-4 border-l-primary shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    Intermediate (Class XII)
+                  </h3>
+                  <div className="flex flex-col sm:flex-row sm:items-center text-gray-600 mt-1">
+                    <span className="font-medium">
+                      D.A.V Public School, Moonidih (Dhanbad)
+                    </span>
+                    <span className="hidden sm:block sm:mx-2">•</span>
+                    <span className="text-sm">Jun 2018 - Jul 2020</span>
+                  </div>
+                  <p className="mt-3 text-gray-700">89%</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="w-full mb-6 bg-white border-l-4 border-l-primary shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    Matriculation (Class X)
+                  </h3>
+                  <div className="flex flex-col sm:flex-row sm:items-center text-gray-600 mt-1">
+                    <span className="font-medium">
+                      D.A.V Public School, Moonidih (Dhanbad)
+                    </span>
+                    <span className="hidden sm:block sm:mx-2">•</span>
+                    <span className="text-sm">April 2018</span>
+                  </div>
+                  <p className="mt-3 text-gray-700">85%</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </motion.div>
+      </section>
+      <Separator className="container mx-auto" />
+      {/* Resume Section */}
+      <section id="resume" className="py-20 container mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl font-bold mb-2">Resume</h2>
+          <p className="text-muted-foreground mb-10">
+            Download my complete resume to learn more about my experience and
+            qualifications
+          </p>
+
+          <div className="flex justify-center">
+            <Card className="w-full max-w-2xl bg-white shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-8 flex flex-col items-center">
+                <div className="mb-6 text-center">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    Roshan Raj Mahato
+                  </h3>
+                  <p className="text-gray-600">Data Scientist & ML Engineer</p>
+                </div>
+                <p className="text-center mb-8">
+                  My resume contains detailed information about my professional
+                  experience, technical skills, certifications, and academic
+                  achievements.
+                </p>
+                <Button asChild size="lg" className="gap-2">
+                  <a
+                    href="https://drive.google.com/file/d/1Dt2TRrsRVm6tM-0QDfmIJXhuTxBP7sOu/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Download Resume
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </motion.div>
       </section>
