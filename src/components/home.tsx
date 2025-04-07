@@ -26,6 +26,8 @@ const Home = () => {
         "Managed data integrity by handling missing values and encoding categorical variables, enhancing quality by 33%.",
       results:
         "Achieved a 96% accuracy rate in forecasting student academic performance through extensive experimentation.",
+      githubLink:
+        "https://github.com/Roshanrajmahato/Student_Performance_mlproject.git",
     },
     {
       id: 2,
@@ -39,6 +41,8 @@ const Home = () => {
         "Developed and fine-tuned a logistic regression-based machine learning model for fraud detection.",
       results:
         "Achieved 87% accuracy rate, optimizing detection efficiency and contributing to the potential prevention of financial losses in real-world scenarios.",
+      githubLink:
+        "https://github.com/Roshanrajmahato/Credit-Card-Fraud-Detection",
     },
     {
       id: 3,
@@ -52,6 +56,8 @@ const Home = () => {
         "Leveraged Keras and TensorFlow to build and train a Convolutional Neural Network for medical imaging diagnostics.",
       results:
         "Achieved 91% accuracy in classifying chest X-ray images as Pneumonia or Normal, enhancing medical imaging diagnostics through automated detection.",
+      githubLink:
+        "https://github.com/Roshanrajmahato/Pneumonia-Detection-and-Classification",
     },
   ];
 
@@ -118,7 +124,7 @@ const Home = () => {
       {/* Navigation */}
       <nav className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-border py-4">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="text-xl font-bold">Jane Doe</div>
+          <div className="text-xl font-bold">RRM</div>
           <div className="flex space-x-6">
             <a href="#about" className="hover:text-primary transition-colors">
               About

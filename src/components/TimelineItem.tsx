@@ -15,6 +15,8 @@ interface TimelineItemProps {
 }
 
 const TimelineItem = ({ experience }: TimelineItemProps) => {
+  // Check if experience is undefined and provide a default empty object
+  const experienceData = experience || {};
   const {
     title = "Data Scientist",
     company = "Tech Company Inc.",
@@ -26,7 +28,7 @@ const TimelineItem = ({ experience }: TimelineItemProps) => {
       "Collaborated with cross-functional teams to identify business opportunities",
       "Created data visualizations and dashboards for stakeholders",
     ],
-  } = experience;
+  } = experienceData;
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
