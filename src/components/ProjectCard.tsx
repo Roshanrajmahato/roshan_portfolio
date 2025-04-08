@@ -35,20 +35,39 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
-  const {
-    title = "Data Analysis Project",
-    description = "A comprehensive analysis of customer behavior patterns using machine learning techniques.",
-    image = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    technologies = ["Python", "Pandas", "Scikit-learn", "Matplotlib"],
-    methodology = "Used clustering algorithms to identify customer segments and predictive modeling to forecast future behavior.",
-    results = "Identified 5 distinct customer segments and improved prediction accuracy by 23%.",
-    visualizations = [
+  // Check if project is undefined and provide default values
+  const defaultProject = {
+    id: 1,
+    title: "Data Analysis Project",
+    description:
+      "A comprehensive analysis of customer behavior patterns using machine learning techniques.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    technologies: ["Python", "Pandas", "Scikit-learn", "Matplotlib"],
+    methodology:
+      "Used clustering algorithms to identify customer segments and predictive modeling to forecast future behavior.",
+    results:
+      "Identified 5 distinct customer segments and improved prediction accuracy by 23%.",
+    visualizations: [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
       "https://images.unsplash.com/photo-1542903660-eedba2cda473?w=800&q=80",
     ],
-    link = "#",
-    githubLink = "https://github.com/Roshanrajmahato/Student_Performance_mlproject.git",
-  } = project;
+    link: "#",
+    githubLink:
+      "https://github.com/Roshanrajmahato/Student_Performance_mlproject.git",
+  };
+
+  const {
+    title,
+    description,
+    image,
+    technologies,
+    methodology,
+    results,
+    visualizations,
+    link,
+    githubLink,
+  } = project || defaultProject;
   const [expanded, setExpanded] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -172,25 +191,24 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               <div className="flex justify-end gap-2">
                 {githubLink && (
                   <Button
-                    as="a"
-                    href={githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     variant="outline"
                     className="flex items-center gap-2"
+                    asChild
                   >
-                    GitHub <Github className="h-4 w-4" />
+                    <a
+                      href={githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GitHub <Github className="h-4 w-4" />
+                    </a>
                   </Button>
                 )}
                 {link && (
-                  <Button
-                    as="a"
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    Visit Project <ExternalLink className="h-4 w-4" />
+                  <Button className="flex items-center gap-2" asChild>
+                    <a href={link} target="_blank" rel="noopener noreferrer">
+                      Visit Project <ExternalLink className="h-4 w-4" />
+                    </a>
                   </Button>
                 )}
               </div>
