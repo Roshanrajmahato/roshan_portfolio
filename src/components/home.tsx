@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  ChevronRight,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,6 +18,30 @@ import TimelineItem from "./TimelineItem";
 import ContactForm from "./ContactForm";
 
 const Home = () => {
+  // State for showing all projects in each category
+  const [showAllMachineLearning, setShowAllMachineLearning] = useState(false);
+  const [showAllDeepLearning, setShowAllDeepLearning] = useState(false);
+  const [showAllNLP, setShowAllNLP] = useState(false);
+  const [showAllGenerativeAI, setShowAllGenerativeAI] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const dropdownRef = useRef(null);
+  const navRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   // Project data by category
   const projectCategories = {
     machineLearning: [
@@ -59,6 +89,21 @@ const Home = () => {
           "Achieved 83% directional accuracy in predicting short-term price movements, providing valuable insights for investment decisions.",
         githubLink: "https://github.com/Roshanrajmahato/Stock-Price-Prediction",
       },
+      {
+        id: 13,
+        title: "Loan Default Prediction",
+        description:
+          "Developed a predictive model to assess the likelihood of loan defaults based on borrower characteristics and loan attributes.",
+        image:
+          "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
+        technologies: ["Python", "XGBoost", "Feature Engineering"],
+        methodology:
+          "Applied ensemble learning techniques and feature importance analysis to identify key risk factors in loan applications.",
+        results:
+          "Achieved 91% accuracy in predicting loan defaults, potentially saving financial institutions from significant losses.",
+        githubLink:
+          "https://github.com/Roshanrajmahato/Loan-Default-Prediction",
+      },
     ],
     deepLearning: [
       {
@@ -105,6 +150,34 @@ const Home = () => {
           "Achieved 92% detection rate of deepfake videos, helping combat misinformation and protect digital media integrity.",
         githubLink: "https://github.com/Roshanrajmahato/DeepFake-Detection",
       },
+      {
+        id: 14,
+        title: "Emotion Recognition",
+        description:
+          "Developed a deep learning system for real-time emotion recognition from facial expressions in video streams.",
+        image:
+          "https://images.unsplash.com/photo-1470406852800-b97e5d92e2aa?w=800&q=80",
+        technologies: ["Python", "TensorFlow", "OpenCV"],
+        methodology:
+          "Implemented a custom CNN architecture optimized for real-time performance on resource-constrained devices.",
+        results:
+          "Achieved 94% accuracy in recognizing 7 distinct emotions with processing speeds suitable for real-time applications.",
+        githubLink: "https://github.com/Roshanrajmahato/Emotion-Recognition",
+      },
+      {
+        id: 15,
+        title: "Facial Recognition",
+        description:
+          "Built a facial recognition system capable of identifying individuals in images and video with high accuracy.",
+        image:
+          "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&q=80",
+        technologies: ["Python", "Dlib", "Face Recognition"],
+        methodology:
+          "Utilized deep metric learning and face embedding techniques to create robust facial representations.",
+        results:
+          "Developed a system with 97% accuracy in controlled environments and 89% accuracy in challenging lighting conditions.",
+        githubLink: "https://github.com/Roshanrajmahato/Facial-Recognition",
+      },
     ],
     naturalLanguageProcessing: [
       {
@@ -150,6 +223,36 @@ const Home = () => {
           "Built a system with 78% user acceptance rate of suggestions, significantly improving text input efficiency.",
         githubLink: "https://github.com/Roshanrajmahato/Sentence-Autocomplete",
       },
+      {
+        id: 16,
+        title: "Predict Closed Questions on Stack Overflow",
+        description:
+          "Developed an NLP model to predict which questions on Stack Overflow are likely to be closed based on content and metadata.",
+        image:
+          "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+        technologies: ["Python", "spaCy", "Scikit-learn"],
+        methodology:
+          "Combined text features with metadata analysis to create a comprehensive prediction model for question quality assessment.",
+        results:
+          "Achieved 83% accuracy in predicting question closure, helping improve content quality and user experience.",
+        githubLink:
+          "https://github.com/Roshanrajmahato/StackOverflow-Question-Predictor",
+      },
+      {
+        id: 17,
+        title: "Language Identification",
+        description:
+          "Built a system that can automatically identify the language of a given text from among 50+ supported languages.",
+        image:
+          "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80",
+        technologies: ["Python", "FastText", "N-gram Analysis"],
+        methodology:
+          "Utilized character-level n-gram features and neural network classification to identify language patterns.",
+        results:
+          "Developed a model with 98% accuracy across major languages and 92% accuracy for less common languages.",
+        githubLink:
+          "https://github.com/Roshanrajmahato/Language-Identification",
+      },
     ],
     generativeAI: [
       {
@@ -193,6 +296,34 @@ const Home = () => {
         results:
           "Created a tool that reduces reading time by 75% while preserving key findings, methodologies, and conclusions.",
         githubLink: "https://github.com/Roshanrajmahato/Paper-Summarizer",
+      },
+      {
+        id: 18,
+        title: "AI-Driven Healthcare Applications",
+        description:
+          "Developed AI applications for healthcare that assist in diagnosis, treatment planning, and patient monitoring.",
+        image:
+          "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+        technologies: ["Python", "TensorFlow", "Medical Imaging"],
+        methodology:
+          "Combined computer vision and natural language processing to analyze medical data and provide clinical decision support.",
+        results:
+          "Created systems that improved diagnostic accuracy by 22% and reduced treatment planning time by 35%.",
+        githubLink: "https://github.com/Roshanrajmahato/AI-Healthcare",
+      },
+      {
+        id: 19,
+        title: "Image-to-Image Translation",
+        description:
+          "Built a generative model that can transform images from one domain to another while preserving content structure.",
+        image:
+          "https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=800&q=80",
+        technologies: ["Python", "PyTorch", "GANs"],
+        methodology:
+          "Implemented and optimized various GAN architectures including CycleGAN and Pix2Pix for different translation tasks.",
+        results:
+          "Developed models capable of realistic style transfer, photo enhancement, and domain adaptation with high visual quality.",
+        githubLink: "https://github.com/Roshanrajmahato/Image-Translation",
       },
     ],
   };
@@ -266,7 +397,10 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-border py-4">
+      <nav
+        ref={navRef}
+        className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-border py-4"
+      >
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-xl font-bold">RRM</div>
           <div className="flex space-x-6">
@@ -279,60 +413,121 @@ const Home = () => {
             >
               Projects
             </a>
-            <div className="relative group">
+            <div
+              className="relative"
+              ref={dropdownRef}
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={(e) => {
+                // Check if the mouse is moving to the dropdown menu
+                if (!dropdownRef.current?.contains(e.relatedTarget)) {
+                  setDropdownOpen(false);
+                }
+              }}
+            >
               <button className="hover:text-primary transition-colors flex items-center">
                 Categories
               </button>
-              <div className="absolute left-0 mt-2 w-48 bg-background border border-border rounded-md shadow-lg py-1 z-10 hidden group-hover:block group-focus-within:block">
-                <a
-                  href="#machine-learning"
-                  className="block px-4 py-2 hover:bg-muted transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document
-                      .getElementById("machine-learning")
-                      ?.scrollIntoView({ behavior: "smooth" });
+              {dropdownOpen && (
+                <div
+                  className="absolute left-0 mt-2 w-48 bg-background border border-border rounded-md shadow-lg py-1 z-10"
+                  onMouseLeave={(e) => {
+                    // Only close if moving outside both button and dropdown
+                    if (!dropdownRef.current?.contains(e.relatedTarget)) {
+                      setDropdownOpen(false);
+                    }
                   }}
                 >
-                  Machine Learning
-                </a>
-                <a
-                  href="#deep-learning"
-                  className="block px-4 py-2 hover:bg-muted transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document
-                      .getElementById("deep-learning")
-                      ?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  Deep Learning
-                </a>
-                <a
-                  href="#nlp"
-                  className="block px-4 py-2 hover:bg-muted transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document
-                      .getElementById("nlp")
-                      ?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  NLP
-                </a>
-                <a
-                  href="#generative-ai"
-                  className="block px-4 py-2 hover:bg-muted transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document
-                      .getElementById("generative-ai")
-                      ?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  Generative AI
-                </a>
-              </div>
+                  <a
+                    href="#machine-learning"
+                    className="block px-4 py-2 hover:bg-muted transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element =
+                        document.getElementById("machine-learning");
+                      const navHeight = navRef.current
+                        ? navRef.current.offsetHeight
+                        : 0;
+                      const elementPosition =
+                        element.getBoundingClientRect().top +
+                        window.pageYOffset;
+                      window.scrollTo({
+                        top: elementPosition - navHeight - 20,
+                        behavior: "smooth",
+                      });
+                      setShowAllMachineLearning(true);
+                      setDropdownOpen(false);
+                    }}
+                  >
+                    Machine Learning
+                  </a>
+                  <a
+                    href="#deep-learning"
+                    className="block px-4 py-2 hover:bg-muted transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.getElementById("deep-learning");
+                      const navHeight = navRef.current
+                        ? navRef.current.offsetHeight
+                        : 0;
+                      const elementPosition =
+                        element.getBoundingClientRect().top +
+                        window.pageYOffset;
+                      window.scrollTo({
+                        top: elementPosition - navHeight - 20,
+                        behavior: "smooth",
+                      });
+                      setShowAllDeepLearning(true);
+                      setDropdownOpen(false);
+                    }}
+                  >
+                    Deep Learning
+                  </a>
+                  <a
+                    href="#nlp"
+                    className="block px-4 py-2 hover:bg-muted transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.getElementById("nlp");
+                      const navHeight = navRef.current
+                        ? navRef.current.offsetHeight
+                        : 0;
+                      const elementPosition =
+                        element.getBoundingClientRect().top +
+                        window.pageYOffset;
+                      window.scrollTo({
+                        top: elementPosition - navHeight - 20,
+                        behavior: "smooth",
+                      });
+                      setShowAllNLP(true);
+                      setDropdownOpen(false);
+                    }}
+                  >
+                    NLP
+                  </a>
+                  <a
+                    href="#generative-ai"
+                    className="block px-4 py-2 hover:bg-muted transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.getElementById("generative-ai");
+                      const navHeight = navRef.current
+                        ? navRef.current.offsetHeight
+                        : 0;
+                      const elementPosition =
+                        element.getBoundingClientRect().top +
+                        window.pageYOffset;
+                      window.scrollTo({
+                        top: elementPosition - navHeight - 20,
+                        behavior: "smooth",
+                      });
+                      setShowAllGenerativeAI(true);
+                      setDropdownOpen(false);
+                    }}
+                  >
+                    Generative AI
+                  </a>
+                </div>
+              )}
             </div>
             <a href="#skills" className="hover:text-primary transition-colors">
               Skills
@@ -418,20 +613,60 @@ const Home = () => {
             <div id="machine-learning">
               <h3 className="text-2xl font-semibold mb-4">Machine Learning</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projectCategories.machineLearning.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
-                ))}
+                {projectCategories.machineLearning
+                  .slice(
+                    0,
+                    showAllMachineLearning
+                      ? projectCategories.machineLearning.length
+                      : 3,
+                  )
+                  .map((project) => (
+                    <ProjectCard key={project.id} project={project} />
+                  ))}
               </div>
+              {projectCategories.machineLearning.length > 3 && (
+                <div className="mt-6 flex justify-center">
+                  <Button
+                    variant="outline"
+                    className="flex items-center gap-2"
+                    onClick={() =>
+                      setShowAllMachineLearning(!showAllMachineLearning)
+                    }
+                  >
+                    {showAllMachineLearning ? "Show Less" : "More Projects"}{" "}
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              )}
             </div>
 
             {/* Deep Learning Projects */}
             <div id="deep-learning">
               <h3 className="text-2xl font-semibold mb-4">Deep Learning</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projectCategories.deepLearning.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
-                ))}
+                {projectCategories.deepLearning
+                  .slice(
+                    0,
+                    showAllDeepLearning
+                      ? projectCategories.deepLearning.length
+                      : 3,
+                  )
+                  .map((project) => (
+                    <ProjectCard key={project.id} project={project} />
+                  ))}
               </div>
+              {projectCategories.deepLearning.length > 3 && (
+                <div className="mt-6 flex justify-center">
+                  <Button
+                    variant="outline"
+                    className="flex items-center gap-2"
+                    onClick={() => setShowAllDeepLearning(!showAllDeepLearning)}
+                  >
+                    {showAllDeepLearning ? "Show Less" : "More Projects"}{" "}
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              )}
             </div>
 
             {/* Natural Language Processing Projects */}
@@ -440,20 +675,58 @@ const Home = () => {
                 Natural Language Processing
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projectCategories.naturalLanguageProcessing.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
-                ))}
+                {projectCategories.naturalLanguageProcessing
+                  .slice(
+                    0,
+                    showAllNLP
+                      ? projectCategories.naturalLanguageProcessing.length
+                      : 3,
+                  )
+                  .map((project) => (
+                    <ProjectCard key={project.id} project={project} />
+                  ))}
               </div>
+              {projectCategories.naturalLanguageProcessing.length > 3 && (
+                <div className="mt-6 flex justify-center">
+                  <Button
+                    variant="outline"
+                    className="flex items-center gap-2"
+                    onClick={() => setShowAllNLP(!showAllNLP)}
+                  >
+                    {showAllNLP ? "Show Less" : "More Projects"}{" "}
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              )}
             </div>
 
             {/* Generative AI Projects */}
             <div id="generative-ai">
               <h3 className="text-2xl font-semibold mb-4">Generative AI</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projectCategories.generativeAI.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
-                ))}
+                {projectCategories.generativeAI
+                  .slice(
+                    0,
+                    showAllGenerativeAI
+                      ? projectCategories.generativeAI.length
+                      : 3,
+                  )
+                  .map((project) => (
+                    <ProjectCard key={project.id} project={project} />
+                  ))}
               </div>
+              {projectCategories.generativeAI.length > 3 && (
+                <div className="mt-6 flex justify-center">
+                  <Button
+                    variant="outline"
+                    className="flex items-center gap-2"
+                    onClick={() => setShowAllGenerativeAI(!showAllGenerativeAI)}
+                  >
+                    {showAllGenerativeAI ? "Show Less" : "More Projects"}{" "}
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
         </motion.div>
