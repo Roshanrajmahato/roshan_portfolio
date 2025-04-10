@@ -57,6 +57,10 @@ const Home = () => {
           "Managed data integrity by handling missing values and encoding categorical variables, enhancing quality by 33%.",
         results:
           "Achieved a 96% accuracy rate in forecasting student academic performance through extensive experimentation.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+        ],
         githubLink:
           "https://github.com/Roshanrajmahato/Student_Performance_mlproject.git",
       },
@@ -72,6 +76,10 @@ const Home = () => {
           "Developed and fine-tuned a logistic regression-based machine learning model for fraud detection.",
         results:
           "Achieved 87% accuracy rate, optimizing detection efficiency and contributing to the potential prevention of financial losses in real-world scenarios.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1565514020179-026b92b2d0b5?w=800&q=80",
+          "https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&q=80",
+        ],
         githubLink:
           "https://github.com/Roshanrajmahato/Credit-Card-Fraud-Detection",
       },
@@ -87,6 +95,10 @@ const Home = () => {
           "Implemented time series analysis and feature engineering to extract meaningful patterns from market data.",
         results:
           "Achieved 83% directional accuracy in predicting short-term price movements, providing valuable insights for investment decisions.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1535320903710-d993d3d77d29?w=800&q=80",
+          "https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?w=800&q=80",
+        ],
         githubLink: "https://github.com/Roshanrajmahato/Stock-Price-Prediction",
       },
       {
@@ -101,6 +113,10 @@ const Home = () => {
           "Applied ensemble learning techniques and feature importance analysis to identify key risk factors in loan applications.",
         results:
           "Achieved 91% accuracy in predicting loan defaults, potentially saving financial institutions from significant losses.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1589666564459-93cdd3ab856a?w=800&q=80",
+          "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80",
+        ],
         githubLink:
           "https://github.com/Roshanrajmahato/Loan-Default-Prediction",
       },
@@ -118,6 +134,10 @@ const Home = () => {
           "Leveraged Keras and TensorFlow to build and train a Convolutional Neural Network for medical imaging diagnostics.",
         results:
           "Achieved 91% accuracy in classifying chest X-ray images as Pneumonia or Normal, enhancing medical imaging diagnostics through automated detection.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+          "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&q=80",
+        ],
         githubLink:
           "https://github.com/Roshanrajmahato/Pneumonia-Detection-and-Classification",
       },
@@ -133,6 +153,10 @@ const Home = () => {
           "Trained a CNN on a diverse dataset of facial expressions to classify seven basic emotions with real-time processing capabilities.",
         results:
           "Developed a model with 89% accuracy in emotion recognition that works across different lighting conditions and facial orientations.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+          "https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?w=800&q=80",
+        ],
         githubLink:
           "https://github.com/Roshanrajmahato/Facial-Emotion-Recognition",
       },
@@ -148,6 +172,10 @@ const Home = () => {
           "Combined convolutional and recurrent neural networks to analyze temporal inconsistencies in video frames that indicate manipulation.",
         results:
           "Achieved 92% detection rate of deepfake videos, helping combat misinformation and protect digital media integrity.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80",
+          "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&q=80",
+        ],
         githubLink: "https://github.com/Roshanrajmahato/DeepFake-Detection",
       },
       {
@@ -162,6 +190,10 @@ const Home = () => {
           "Implemented a custom CNN architecture optimized for real-time performance on resource-constrained devices.",
         results:
           "Achieved 94% accuracy in recognizing 7 distinct emotions with processing speeds suitable for real-time applications.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80",
+          "https://images.unsplash.com/photo-1517677129300-07b130802f46?w=800&q=80",
+        ],
         githubLink: "https://github.com/Roshanrajmahato/Emotion-Recognition",
       },
       {
@@ -176,6 +208,10 @@ const Home = () => {
           "Utilized deep metric learning and face embedding techniques to create robust facial representations.",
         results:
           "Developed a system with 97% accuracy in controlled environments and 89% accuracy in challenging lighting conditions.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80",
+          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
+        ],
         githubLink: "https://github.com/Roshanrajmahato/Facial-Recognition",
       },
     ],
@@ -192,6 +228,10 @@ const Home = () => {
           "Implemented both extractive and abstractive summarization techniques using state-of-the-art transformer models.",
         results:
           "Created a system that reduces document length by up to 80% while retaining key information and context.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&q=80",
+          "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&q=80",
+        ],
         githubLink: "https://github.com/Roshanrajmahato/Text-Summarization",
       },
       {
@@ -206,6 +246,10 @@ const Home = () => {
           "Fine-tuned pre-trained language models to detect subtle patterns and inconsistencies in AI-generated content.",
         results:
           "Developed a detector with 88% accuracy in identifying AI-written content across various domains and writing styles.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1516414447565-b14be0adf13e?w=800&q=80",
+          "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80",
+        ],
         githubLink:
           "https://github.com/Roshanrajmahato/Deepfake-Text-Detection",
       },
@@ -221,6 +265,10 @@ const Home = () => {
           "Fine-tuned language models on domain-specific corpora to generate contextually appropriate sentence completions.",
         results:
           "Built a system with 78% user acceptance rate of suggestions, significantly improving text input efficiency.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+          "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&q=80",
+        ],
         githubLink: "https://github.com/Roshanrajmahato/Sentence-Autocomplete",
       },
       {
@@ -235,6 +283,10 @@ const Home = () => {
           "Combined text features with metadata analysis to create a comprehensive prediction model for question quality assessment.",
         results:
           "Achieved 83% accuracy in predicting question closure, helping improve content quality and user experience.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80",
+          "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
+        ],
         githubLink:
           "https://github.com/Roshanrajmahato/StackOverflow-Question-Predictor",
       },
@@ -250,6 +302,10 @@ const Home = () => {
           "Utilized character-level n-gram features and neural network classification to identify language patterns.",
         results:
           "Developed a model with 98% accuracy across major languages and 92% accuracy for less common languages.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1493612276216-ee3925520721?w=800&q=80",
+          "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?w=800&q=80",
+        ],
         githubLink:
           "https://github.com/Roshanrajmahato/Language-Identification",
       },
@@ -267,6 +323,10 @@ const Home = () => {
           "Integrated speech recognition, natural language understanding, and text-to-speech to create a seamless voice interaction experience.",
         results:
           "Created a personalized assistant with 95% speech recognition accuracy and contextually relevant responses.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?w=800&q=80",
+          "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
+        ],
         githubLink: "https://github.com/Roshanrajmahato/Voice-Assistant-GPT",
       },
       {
@@ -281,6 +341,10 @@ const Home = () => {
           "Leveraged pre-trained multilingual models and fine-tuned them for specific language pairs to improve translation quality.",
         results:
           "Developed a translator with BLEU scores comparable to commercial solutions for major language pairs.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1516382799247-87df95d790b7?w=800&q=80",
+          "https://images.unsplash.com/photo-1493612276216-ee3925520721?w=800&q=80",
+        ],
         githubLink: "https://github.com/Roshanrajmahato/AI-Translator",
       },
       {
@@ -295,6 +359,10 @@ const Home = () => {
           "Combined extractive and abstractive summarization techniques specialized for scientific language and structure.",
         results:
           "Created a tool that reduces reading time by 75% while preserving key findings, methodologies, and conclusions.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?w=800&q=80",
+          "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&q=80",
+        ],
         githubLink: "https://github.com/Roshanrajmahato/Paper-Summarizer",
       },
       {
@@ -309,6 +377,10 @@ const Home = () => {
           "Combined computer vision and natural language processing to analyze medical data and provide clinical decision support.",
         results:
           "Created systems that improved diagnostic accuracy by 22% and reduced treatment planning time by 35%.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=800&q=80",
+          "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&q=80",
+        ],
         githubLink: "https://github.com/Roshanrajmahato/AI-Healthcare",
       },
       {
@@ -323,6 +395,10 @@ const Home = () => {
           "Implemented and optimized various GAN architectures including CycleGAN and Pix2Pix for different translation tasks.",
         results:
           "Developed models capable of realistic style transfer, photo enhancement, and domain adaptation with high visual quality.",
+        visualizations: [
+          "https://images.unsplash.com/photo-1558244661-d248897f7bc4?w=800&q=80",
+          "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?w=800&q=80",
+        ],
         githubLink: "https://github.com/Roshanrajmahato/Image-Translation",
       },
     ],
@@ -413,121 +489,96 @@ const Home = () => {
             >
               Projects
             </a>
-            <div
-              className="relative"
-              ref={dropdownRef}
-              onMouseEnter={() => setDropdownOpen(true)}
-              onMouseLeave={(e) => {
-                // Check if the mouse is moving to the dropdown menu
-                if (!dropdownRef.current?.contains(e.relatedTarget)) {
-                  setDropdownOpen(false);
-                }
-              }}
-            >
-              <button className="hover:text-primary transition-colors flex items-center">
+            <div className="relative dropdown-container" ref={dropdownRef}>
+              <button className="transition-colors flex items-center">
                 Categories
               </button>
-              {dropdownOpen && (
-                <div
-                  className="absolute left-0 mt-2 w-48 bg-background border border-border rounded-md shadow-lg py-1 z-10"
-                  onMouseLeave={(e) => {
-                    // Only close if moving outside both button and dropdown
-                    if (!dropdownRef.current?.contains(e.relatedTarget)) {
-                      setDropdownOpen(false);
-                    }
+              <div className="absolute left-0 mt-2 w-48 bg-background border border-border rounded-md shadow-lg py-1 z-10 hidden">
+                <a
+                  href="#machine-learning"
+                  className="block px-4 py-2 hover:bg-muted transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById("machine-learning");
+                    const navHeight = navRef.current
+                      ? navRef.current.offsetHeight
+                      : 0;
+                    const elementPosition =
+                      element.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({
+                      top: elementPosition - navHeight - 20,
+                      behavior: "smooth",
+                    });
+                    setShowAllMachineLearning(true);
+                    setDropdownOpen(false);
                   }}
                 >
-                  <a
-                    href="#machine-learning"
-                    className="block px-4 py-2 hover:bg-muted transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const element =
-                        document.getElementById("machine-learning");
-                      const navHeight = navRef.current
-                        ? navRef.current.offsetHeight
-                        : 0;
-                      const elementPosition =
-                        element.getBoundingClientRect().top +
-                        window.pageYOffset;
-                      window.scrollTo({
-                        top: elementPosition - navHeight - 20,
-                        behavior: "smooth",
-                      });
-                      setShowAllMachineLearning(true);
-                      setDropdownOpen(false);
-                    }}
-                  >
-                    Machine Learning
-                  </a>
-                  <a
-                    href="#deep-learning"
-                    className="block px-4 py-2 hover:bg-muted transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const element = document.getElementById("deep-learning");
-                      const navHeight = navRef.current
-                        ? navRef.current.offsetHeight
-                        : 0;
-                      const elementPosition =
-                        element.getBoundingClientRect().top +
-                        window.pageYOffset;
-                      window.scrollTo({
-                        top: elementPosition - navHeight - 20,
-                        behavior: "smooth",
-                      });
-                      setShowAllDeepLearning(true);
-                      setDropdownOpen(false);
-                    }}
-                  >
-                    Deep Learning
-                  </a>
-                  <a
-                    href="#nlp"
-                    className="block px-4 py-2 hover:bg-muted transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const element = document.getElementById("nlp");
-                      const navHeight = navRef.current
-                        ? navRef.current.offsetHeight
-                        : 0;
-                      const elementPosition =
-                        element.getBoundingClientRect().top +
-                        window.pageYOffset;
-                      window.scrollTo({
-                        top: elementPosition - navHeight - 20,
-                        behavior: "smooth",
-                      });
-                      setShowAllNLP(true);
-                      setDropdownOpen(false);
-                    }}
-                  >
-                    NLP
-                  </a>
-                  <a
-                    href="#generative-ai"
-                    className="block px-4 py-2 hover:bg-muted transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const element = document.getElementById("generative-ai");
-                      const navHeight = navRef.current
-                        ? navRef.current.offsetHeight
-                        : 0;
-                      const elementPosition =
-                        element.getBoundingClientRect().top +
-                        window.pageYOffset;
-                      window.scrollTo({
-                        top: elementPosition - navHeight - 20,
-                        behavior: "smooth",
-                      });
-                      setShowAllGenerativeAI(true);
-                      setDropdownOpen(false);
-                    }}
-                  >
-                    Generative AI
-                  </a>
-                </div>
-              )}
+                  Machine Learning
+                </a>
+                <a
+                  href="#deep-learning"
+                  className="block px-4 py-2 hover:bg-muted transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById("deep-learning");
+                    const navHeight = navRef.current
+                      ? navRef.current.offsetHeight
+                      : 0;
+                    const elementPosition =
+                      element.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({
+                      top: elementPosition - navHeight - 20,
+                      behavior: "smooth",
+                    });
+                    setShowAllDeepLearning(true);
+                    setDropdownOpen(false);
+                  }}
+                >
+                  Deep Learning
+                </a>
+                <a
+                  href="#nlp"
+                  className="block px-4 py-2 hover:bg-muted transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById("nlp");
+                    const navHeight = navRef.current
+                      ? navRef.current.offsetHeight
+                      : 0;
+                    const elementPosition =
+                      element.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({
+                      top: elementPosition - navHeight - 20,
+                      behavior: "smooth",
+                    });
+                    setShowAllNLP(true);
+                    setDropdownOpen(false);
+                  }}
+                >
+                  NLP
+                </a>
+                <a
+                  href="#generative-ai"
+                  className="block px-4 py-2 hover:bg-muted transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById("generative-ai");
+                    const navHeight = navRef.current
+                      ? navRef.current.offsetHeight
+                      : 0;
+                    const elementPosition =
+                      element.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({
+                      top: elementPosition - navHeight - 20,
+                      behavior: "smooth",
+                    });
+                    setShowAllGenerativeAI(true);
+                    setDropdownOpen(false);
+                  }}
+                >
+                  Generative AI
+                </a>
+              </div>
             </div>
             <a href="#skills" className="hover:text-primary transition-colors">
               Skills

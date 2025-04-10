@@ -168,11 +168,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 <p className="text-muted-foreground">{results}</p>
               </div>
 
-              {visualizations && visualizations.length > 0 && (
-                <div>
-                  <h4 className="font-semibold mb-2">Visualizations</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {visualizations.map((viz, index) => (
+              <div>
+                <h4 className="font-semibold mb-2">Visualizations</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {visualizations && visualizations.length > 0 ? (
+                    visualizations.map((viz, index) => (
                       <div
                         key={index}
                         className="border rounded-md overflow-hidden"
@@ -183,10 +183,27 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                           className="w-full h-auto"
                         />
                       </div>
-                    ))}
-                  </div>
+                    ))
+                  ) : (
+                    <>
+                      <div className="border rounded-md overflow-hidden">
+                        <img
+                          src={`https://images.unsplash.com/photo-${Math.floor(Math.random() * 1000000000)}?w=800&q=80`}
+                          alt="Visualization 1"
+                          className="w-full h-auto"
+                        />
+                      </div>
+                      <div className="border rounded-md overflow-hidden">
+                        <img
+                          src={`https://images.unsplash.com/photo-${Math.floor(Math.random() * 1000000000) + 1000}?w=800&q=80`}
+                          alt="Visualization 2"
+                          className="w-full h-auto"
+                        />
+                      </div>
+                    </>
+                  )}
                 </div>
-              )}
+              </div>
 
               <div className="flex justify-end gap-2">
                 {githubLink && (
